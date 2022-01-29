@@ -46,9 +46,6 @@
 	<storageModule moduleId="cdtBuildSystem" version="4.0.0">
 		<project id="cpp-projects.null.1643747268" name="cpp-projects"/>
 	</storageModule>
-	<storageModule moduleId="scannerConfiguration">
-		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
-	</storageModule>
 	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
 	<storageModule moduleId="refreshScope" versionNumber="2">
 		<configuration configurationName="Default">
@@ -81,6 +78,23 @@
 				<useDefaultCommand>true</useDefaultCommand>
 				<runAllBuilders>true</runAllBuilders>
 			</target>
+			<target name="02_bookshop_management_system" path="" targetID="org.eclipse.cdt.build.MakeTargetBuilder">
+				<buildCommand>mingw32-make.exe</buildCommand>
+				<buildArguments>-f D:\cpp_projects\eclipse_workspace\..\project\Makefile</buildArguments>
+				<buildTarget>02_bookshop_management_system</buildTarget>
+				<stopOnError>true</stopOnError>
+				<useDefaultCommand>true</useDefaultCommand>
+				<runAllBuilders>true</runAllBuilders>
+			</target>
 		</buildTargets>
+	</storageModule>
+	<storageModule moduleId="scannerConfiguration">
+		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		<scannerConfigBuildInfo instanceId="cdt.managedbuild.toolchain.gnu.mingw.base.1358233422;cdt.managedbuild.toolchain.gnu.mingw.base.1358233422.616826452;cdt.managedbuild.tool.gnu.cpp.compiler.mingw.base.38851034;cdt.managedbuild.tool.gnu.cpp.compiler.input.903480416">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="cdt.managedbuild.toolchain.gnu.mingw.base.1358233422;cdt.managedbuild.toolchain.gnu.mingw.base.1358233422.616826452;cdt.managedbuild.tool.gnu.c.compiler.mingw.base.1146918888;cdt.managedbuild.tool.gnu.c.compiler.input.597213334">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
 	</storageModule>
 </cproject>
