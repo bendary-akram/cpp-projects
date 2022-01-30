@@ -1,39 +1,37 @@
 /*
- * Books.cpp
+ * Suppliers.cpp
  *
- *  Created on: Jan 27, 2022
+ *  Created on: Jan 30, 2022
  *      Author: Akram
  */
 
-#include "Books.h"
+#include "Suppliers.h"
 
-Books::Books()
+Suppliers::Suppliers()
 {
 	// TODO Auto-generated constructor stub
-
-	number_pages = 0;
-	price = 0;
-	table_name = "BOOKS";
+	name = "";
+	phn = 0;
+	table_name = "SUPPLIERS";
 
 	stmt.str("");
 	/* Create SQL statement */
 	stmt << "CREATE TABLE " << '"' << table_name << '"' << "("
 			"ID INTEGER PRIMARY KEY  AUTOINCREMENT  NOT NULL,"
 			"NAME           TEXT    NOT NULL,"
-			"PAGES            INT     NOT NULL,"
-			"PRICE            INT     NOT NULL);";
+			"PHONE            INT     NOT NULL);";
 
 	db_exec();
 
 }
 
-Books::~Books()
+Suppliers::~Suppliers()
 {
 	// TODO Auto-generated destructor stub
-	sqlite3_close(db);
+
 }
 
-void Books::menu()
+void Suppliers::menu()
 {
 	// TODO Auto-generated constructor stub
 
@@ -41,9 +39,9 @@ void Books::menu()
 	while (c != 5)
 	{
 		cout << "*************************************************" << endl;
-		cout << "         Books Tab" << endl;
+		cout << "         Supplier Tab" << endl;
 		cout << "*************************************************" << endl;
-		cout << "   1. List all BOOKS" << endl;
+		cout << "   1. List all Suppliers" << endl;
 		cout << "   2. Add" << endl;
 		cout << "   3. Get" << endl;
 		cout << "   4. Delete" << endl;
@@ -74,22 +72,19 @@ void Books::menu()
 	}
 }
 
-void Books::add()
+void Suppliers::add()
 {
 
-	cout << "Enter The Book name : ";
+	cout << "Enter The Supplier name : ";
 	cin >> name;
-	cout << "Enter The number of Pagees : " << endl;
-	cin >> number_pages;
-	cout << "Enter The price: ";
-	cin >> price;
+	cout << "Enter The Mobile number : ";
+	cin >> phn;
 
 	stmt.str("");
 	/* Create SQL statement */
 	stmt << "INSERT INTO " << '"' << table_name << '"'
-			<< "(NAME,PAGES,PRICE) VALUES (" << '"' << name << '"' << ','
-			<< number_pages << ',' << price << "); ";
+			<< "(NAME,PHONE) VALUES (" << '"' << name << '"' << ',' << phn
+			<< "); ";
 
 	db_exec();
 }
-

@@ -1,9 +1,15 @@
 #include <iostream>
 #include "Books.h"
+#include "Suppliers.h"
 
-int main() {
+int main()
+{
+	Books book;
+	Suppliers supplier;
+
 	int c = 0;
-	while (c != 7) {
+	while (c != 7)
+	{
 
 		cout << "*************************************************" << endl;
 		cout << "         BOOKSHOP MANGEMENT SYSTEM" << endl;
@@ -18,12 +24,20 @@ int main() {
 		cout << "Enter Your Choice : ";
 		cin >> c;
 
-		switch (c) {
+		switch (c)
+		{
 		case 1:
+		{
 			system("cls");
-			Books book;
 			book.menu();
 			break;
+		}
+		case 2:
+		{
+			system("cls");
+			supplier.menu();
+			break;
+		}
 
 			defualt: break;
 		}
