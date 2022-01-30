@@ -1,11 +1,13 @@
 #include <iostream>
 #include "Books.h"
 #include "Suppliers.h"
+#include "Purchases.h"
 
 int main()
 {
 	Books book;
 	Suppliers supplier;
+	Purchases purchase;
 
 	int c = 0;
 	while (c != 7)
@@ -38,7 +40,12 @@ int main()
 			supplier.menu();
 			break;
 		}
-
+		case 3:
+		{
+			system("cls");
+			purchase.menu();
+			break;
+		}
 			defualt: break;
 		}
 	}

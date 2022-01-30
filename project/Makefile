@@ -96,12 +96,16 @@ $(BIN_DIR)\01_Hello.o: .\01_Hello\hi.cpp
 ##############################################################################
 
 ################################# 02_bookshop_management_system ##############################################
-02_bookshop_management_system : $(BIN_DIR)\sqlite.o $(BIN_DIR)\02_bookshop_management_system.o  $(BIN_DIR)\Bookshop.o $(BIN_DIR)\Books.o $(BIN_DIR)\Suppliers.o 
+02_bookshop_management_system : $(BIN_DIR)\sqlite.o $(BIN_DIR)\02_bookshop_management_system.o  \
+								$(BIN_DIR)\Bookshop.o $(BIN_DIR)\Books.o $(BIN_DIR)\Suppliers.o \
+								$(BIN_DIR)\Purchases.o 
+								
 	$(CXX) -o $(BIN_DIR)\02_bookshop_management_system \
 	 			$(BIN_DIR)\02_bookshop_management_system.o \
 	 			$(BIN_DIR)\Bookshop.o \
 	 			$(BIN_DIR)\Books.o \
 	 			$(BIN_DIR)\Suppliers.o \
+	 			$(BIN_DIR)\Purchases.o \
 	 			$(BIN_DIR)\sqlite.o
 
 $(BIN_DIR)\02_bookshop_management_system.o: .\02_bookshop_management_system\main.cpp
@@ -115,6 +119,9 @@ $(BIN_DIR)\Bookshop.o: .\02_bookshop_management_system\Bookshop.cpp
 
 $(BIN_DIR)\Suppliers.o: .\02_bookshop_management_system\Suppliers.cpp
 	$(CXX) $(INC_DIR) $(CXXFLAGS) .\02_bookshop_management_system\Suppliers.cpp -o $(BIN_DIR)\Suppliers.o
+
+$(BIN_DIR)\Purchases.o: .\02_bookshop_management_system\Purchases.cpp
+	$(CXX) $(INC_DIR) $(CXXFLAGS) .\02_bookshop_management_system\Purchases.cpp -o $(BIN_DIR)\Purchases.o
 		
 $(BIN_DIR)\sqlite.o: $(SQLITE_DIR)\sqlite3.c
 	$(CC) $(CFLAGS) $(SQLITE_DIR)\sqlite3.c -o $(BIN_DIR)\sqlite.o

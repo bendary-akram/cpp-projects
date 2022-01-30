@@ -1,39 +1,39 @@
 /*
- * Books.cpp
+ * Purchases.cpp
  *
- *  Created on: Jan 27, 2022
+ *  Created on: Jan 30, 2022
  *      Author: Akram
  */
 
-#include "Books.h"
+#include "Purchases.h"
 
-Books::Books()
+Purchases::Purchases()
 {
 	// TODO Auto-generated constructor stub
+	book_id=0;
+	sup_id=0;
+	qty=0;
 
-	number_pages = 0;
-	price = 0;
-	table_name = "BOOKS";
+	table_name="PURCHASE";
 
 	stmt.str("");
 	/* Create SQL statement */
 	stmt << "CREATE TABLE " << '"' << table_name << '"' << "("
 			"ID INTEGER PRIMARY KEY  AUTOINCREMENT  NOT NULL,"
-			"NAME           TEXT    NOT NULL,"
-			"PAGES            INT     NOT NULL,"
-			"PRICE            INT     NOT NULL);";
+			"BOOK_ID            INT     NOT NULL,"
+			"SUP_ID            INT     NOT NULL,"
+			"QTY            INT     NOT NULL);";
 
 	db_exec();
 
 }
 
-Books::~Books()
+Purchases::~Purchases()
 {
 	// TODO Auto-generated destructor stub
-	sqlite3_close(db);
 }
 
-void Books::menu()
+void Purchases::menu()
 {
 	// TODO Auto-generated constructor stub
 
@@ -41,13 +41,13 @@ void Books::menu()
 	while (c != 6)
 	{
 		cout << "*************************************************" << endl;
-		cout << "         Books Tab" << endl;
+		cout << "         Purchases Tab" << endl;
 		cout << "*************************************************" << endl;
-		cout << "   1. List all BOOKS" << endl;
+		cout << "   1. List all Purchases" << endl;
 		cout << "   2. Add" << endl;
 		cout << "   3. Get" << endl;
 		cout << "   4. Delete" << endl;
-		cout << "   5. update price" << endl;
+		cout << "   5. Update Quantity" << endl;
 		cout << "   6. Back to the previous menu " << endl << endl << endl;
 		cout << "Enter Your Choice : ";
 		cin >> c;
@@ -67,7 +67,7 @@ void Books::menu()
 			del();
 			break;
 		case 5:
-			update_price();
+			update_qty();
 			break;
 		case 6:
 			//Exit from loop
@@ -78,36 +78,36 @@ void Books::menu()
 	}
 }
 
-void Books::add()
+void Purchases::add()
 {
 
-	cout << "Enter The Book name : ";
-	cin >> name;
-	cout << "Enter The number of Pagees : " << endl;
-	cin >> number_pages;
-	cout << "Enter The price: ";
-	cin >> price;
+	cout << "Enter The Book ID : ";
+	cin >> book_id;
+	cout << "Enter The Supplier ID : " << endl;
+	cin >> sup_id;
+	cout << "Enter The Quantity: ";
+	cin >> qty;
 
 	stmt.str("");
 	/* Create SQL statement */
 	stmt << "INSERT INTO " << '"' << table_name << '"'
-			<< "(NAME,PAGES,PRICE) VALUES (" << '"' << name << '"' << ','
-			<< number_pages << ',' << price << "); ";
+			<< "(BOOK_ID,SUP_ID,QTY) VALUES (" << book_id << ','
+			<< sup_id << ',' << qty << "); ";
 
 	db_exec();
 }
 
-void Books::update_price()
+void Purchases::update_qty()
 {
-	cout << "Enter The Book ID : ";
+	cout << "Enter The Purchase ID : ";
 	cin >> id;
-	cout << "Enter The new price: ";
-	cin >> price;
+	cout << "Enter The new Quantity: ";
+	cin >> qty;
 
 	stmt.str("");
 	/* Create SQL statement */
 	stmt << "UPDATE " << '"' << table_name << '"'
-			<< "SET PRICE=" <<  price << " "
+			<< "SET QTY=" <<  qty << " "
 			<< "WHERE  ID =" << id << ';';
 
 	db_exec();

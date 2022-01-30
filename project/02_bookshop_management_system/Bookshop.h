@@ -18,11 +18,11 @@ class Bookshop
 {
 private:
 	char *zErrMsg;
-	int id;
 	string query;
 	char const *sql;
 
 protected:
+	int id;
 	string table_name;
 	stringstream stmt;
 	sqlite3 *db;

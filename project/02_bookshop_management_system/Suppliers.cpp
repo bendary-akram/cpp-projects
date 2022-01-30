@@ -36,7 +36,7 @@ void Suppliers::menu()
 	// TODO Auto-generated constructor stub
 
 	int c = 0;
-	while (c != 5)
+	while (c != 6)
 	{
 		cout << "*************************************************" << endl;
 		cout << "         Supplier Tab" << endl;
@@ -45,7 +45,8 @@ void Suppliers::menu()
 		cout << "   2. Add" << endl;
 		cout << "   3. Get" << endl;
 		cout << "   4. Delete" << endl;
-		cout << "   5. Back to the previous menu " << endl << endl << endl;
+		cout << "   5. Update Phone" << endl;
+		cout << "   6. Back to the previous menu " << endl << endl << endl;
 		cout << "Enter Your Choice : ";
 		cin >> c;
 
@@ -64,6 +65,9 @@ void Suppliers::menu()
 			del();
 			break;
 		case 5:
+			update_phone();
+			break;
+		case 6:
 			//Exit from loop
 			break;
 		default:
@@ -87,4 +91,21 @@ void Suppliers::add()
 			<< "); ";
 
 	db_exec();
+}
+
+void Suppliers::update_phone()
+{
+	cout << "Enter The Supplier ID : ";
+	cin >> id;
+	cout << "Enter The new Mobile: ";
+	cin >> phn;
+
+	stmt.str("");
+	/* Create SQL statement */
+	stmt << "UPDATE " << '"' << table_name << '"'
+			<< "SET PHONE=" <<  phn << " "
+			<< "WHERE  ID =" << id << ';';
+
+	db_exec();
+
 }

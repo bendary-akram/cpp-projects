@@ -22,6 +22,7 @@ public:
 	virtual ~Books();
 	void menu();
 	void add();
+	void update_price();
 };
 
 #endif /* 02_BOOKSHOP_MANAGEMENT_SYSTEM_BOOKS_H_ */

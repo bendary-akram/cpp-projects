@@ -94,6 +94,7 @@ void Bookshop::db_exec()
 
 	query = stmt.str();
 	sql = query.c_str();
+	cout << sql <<endl;
 	/* Execute SQL statement */
 	rc = sqlite3_exec(db, sql, callback, 0, &zErrMsg);
 
@@ -106,3 +107,4 @@ void Bookshop::db_exec()
 		cout << "Operation done successfully" << endl;
 	}
 }
+

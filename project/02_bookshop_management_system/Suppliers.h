@@ -21,6 +21,7 @@ public:
 
 	void menu();
 	void add();
+	void update_phone();
 };
 
 #endif /* 02_BOOKSHOP_MANAGEMENT_SYSTEM_SUPPLIERS_H_ */
