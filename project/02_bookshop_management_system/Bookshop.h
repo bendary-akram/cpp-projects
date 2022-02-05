@@ -9,7 +9,7 @@
 #define BOOKSHOP_MANAGEMENT_SYSTEM_BOOKSHOP_H_
 
 #include <iostream>
-#include "..\sqlite3\sqlite3.h"
+#include "../sqlite3/sqlite3.h"
 #include <sstream>
 
 using namespace std;

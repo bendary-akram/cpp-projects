@@ -1,0 +1,383 @@
+make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+# GNU Make 4.2.1
+# Built for x86_64-pc-linux-gnu
+# Copyright (C) 1988-2016 Free Software Foundation, Inc.
+# License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+# This is free software: you are free to change and redistribute it.
+# There is NO WARRANTY, to the extent permitted by law.
+ 
+
+# Make data base, printed on Sat Feb  5 22:04:46 2022
+
+# Variables
+
+# automatic
+<D = $(patsubst %/,%,$(dir $<))
+# automatic
+?F = $(notdir $?)
+# environment
+WSLENV = ELECTRON_RUN_AS_NODE/w:
+# default
+.SHELLFLAGS := -c
+# environment
+VSCODE_LOG_NATIVE = false
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
+# makefile (from 'Makefile', line 13)
+CPPFLAGS = -c -g -Wall -std=c++14 -O0 
+# automatic
+@D = $(patsubst %/,%,$(dir $@))
+# automatic
+@F = $(notdir $@)
+# makefile (from 'Makefile', line 26)
+LDLIBS = -ldl
+# makefile
+CURDIR := /mnt/d/cpp_projects/project
+# makefile
+SHELL = /bin/sh
+# environment
+VSCODE_NLS_CONFIG = {"locale":"en","availableLanguages":{}}
+# environment
+_ = /mnt/c/Users/Akram/AppData/Local/Programs/Microsoft VS Code/bin/code
+# makefile (from 'Makefile', line 21)
+CFLAGS = -c -g -O0 -std=c99
+# makefile (from 'Makefile', line 1)
+MAKEFILE_LIST :=  Makefile
+# 'override' directive
+GNUMAKEFLAGS := 
+# environment
+XDG_DATA_DIRS = /usr/local/share:/usr/share:/var/lib/snapd/desktop
+# environment
+VSCODE_VERBOSE_LOGGING = true
+# environment
+LESSOPEN = | /usr/bin/lesspipe %s
+# makefile (from 'Makefile', line 4)
+CPP = g++
+# environment
+VSCODE_CWD = /mnt/c/Users/Akram/AppData/Local/Programs/Microsoft VS Code
+# default
+MAKE_HOST := x86_64-pc-linux-gnu
+# environment
+PATH = /home/akram/.vscode-server/bin/5554b12acf27056905806867f251c859323ff7e9/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/mnt/c/Program Files/WindowsApps/CanonicalGroupLimited.UbuntuonWindows_2004.2021.825.0_x64__79rhkp1fndgsc:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin:/mnt/c/sqlite:/mnt/c/Users/Akram/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/Akram/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin
+# environment
+VSCODE_LOG_STACK = false
+# environment
+VSCODE_IPC_HOOK_CLI = /tmp/vscode-ipc-ef8cfea1-2aaa-4b13-ac05-877d404bcc75.sock
+# makefile (from 'Makefile', line 25)
+LDFLAGS = -pthread -W 
+# default
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
+# environment
+LS_COLORS = rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
+# automatic
+%F = $(notdir $%)
+# environment
+VSCODE_PIPE_LOGGING = true
+# environment
+PWD = /mnt/d/cpp_projects/project
+# default
+.LOADED := 
+# makefile (from 'Makefile', line 49)
+INC_DIR = -I$(SQLITE_DIR)
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/services/extensions/node/extensionHostProcess
+# environment
+HOME = /home/akram
+# environment
+LESSCLOSE = /usr/bin/lesspipe %s %s
+# environment
+LOGNAME = akram
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# environment
+MAKELEVEL := 0
+# default
+MAKE = $(MAKE_COMMAND)
+# default
+MAKECMDGOALS := all
+# environment
+SHLVL = 1
+# makefile (from 'Makefile', line 5)
+CC = gcc
+# default
+MAKE_VERSION := 4.2.1
+# environment
+USER = akram
+# makefile
+.DEFAULT_GOAL := all
+# environment
+NAME = Code
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# environment
+VSCODE_WSL_EXT_LOCATION = /mnt/c/Users/Akram/.vscode/extensions/ms-vscode-remote.remote-wsl-0.64.2
+# makefile (from 'Makefile', line 41)
+OBJECTS_C = $(filter %.c,$($(TARGET)_SRC))
+# default
+MAKE_COMMAND := make
+# default
+.VARIABLES := 
+# automatic
+*F = $(notdir $*)
+# makefile
+MAKEFLAGS = pqrR
+# environment
+MFLAGS = -pqrR
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# automatic
++F = $(notdir $+)
+# makefile (from 'Makefile', line 88)
+binaries = 01_Hello 02_bookshop_management_system
+# makefile (from 'Makefile', line 48)
+SQLITE_DIR = ./sqlite3
+# default
+MAKEFILES := 
+# automatic
+<F = $(notdir $<)
+# makefile (from 'Makefile', line 40)
+OBJECTS_CPP = $(filter %.cpp,$($(TARGET)_SRC))
+# makefile (from 'Makefile', line 47)
+BIN_DIR = ./bin
+# environment
+LC_ALL = C
+# environment
+HOSTTYPE = x86_64
+# automatic
+^F = $(notdir $^)
+# default
+SUFFIXES := 
+# default
+.INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
+# default
+ 
+.RECIPEPREFIX := 
+# makefile (from 'Makefile', line 42)
+OBJECTS = $(OBJECTS_CPP:.cpp=.o) $(OBJECTS_C:.c=.o)
+# environment
+LANG = C
+# environment
+TERM = xterm-256color
+# environment
+VSCODE_EXTHOST_WILL_SEND_SOCKET = true
+# environment
+WSL_DISTRO_NAME = Ubuntu
+# variable set hash-table stats:
+# Load=78/1024=8%, Rehash=0, Collisions=4/124=3%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# . (device 15, inode 281474976710843): 12 files, no impossibilities.
+
+# 12 files, no impossibilities in 1 directories.
+
+# Implicit Rules
+
+# No implicit rules.
+
+# Files
+
+bin/Purchases.o: 02_bookshop_management_system/Purchases.cpp
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 125):
+	$(CPP) $(INC_DIR) $(CPPFLAGS) ./02_bookshop_management_system/Purchases.cpp -o $(BIN_DIR)/Purchases.o
+		
+
+all: 01_Hello 02_bookshop_management_system
+#  Command line target.
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/6=0%
+
+bin/Books.o: 02_bookshop_management_system/Books.cpp
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 116):
+	$(CPP) $(INC_DIR) $(CPPFLAGS) ./02_bookshop_management_system/Books.cpp -o $(BIN_DIR)/Books.o
+	
+
+# Not a target:
+02_bookshop_management_system/main.cpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+02_bookshop_management_system/Suppliers.cpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+01_Hello: bin/01_Hello.o
+#  Implicit rule search has not been done.
+#  Last modified 2022-01-23 22:48:49.4560206
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/6=0%
+#  recipe to execute (from 'Makefile', line 91):
+	$(CPP) -o $(BIN_DIR)/01_Hello $(BIN_DIR)/01_Hello.o
+	
+
+bin/01_Hello.o: 01_Hello/hi.cpp
+#  Implicit rule search has not been done.
+#  Implicit/static pattern stem: ''
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := bin/01_Hello.o
+# automatic
+# % := 
+# automatic
+# * := 
+# automatic
+# + := 01_Hello/hi.cpp
+# automatic
+# | := 
+# automatic
+# < := 01_Hello/hi.cpp
+# automatic
+# ^ := 01_Hello/hi.cpp
+# automatic
+# ? := 01_Hello/hi.cpp
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=1/14=7%
+#  recipe to execute (from 'Makefile', line 95):
+	$(CPP) $(CPPFLAGS) ./01_Hello/hi.cpp -o $(BIN_DIR)/01_Hello.o
+	
+
+# Not a target:
+.SUFFIXES:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+Makefile:
+#  Implicit rule search has been done.
+#  Last modified 2022-02-05 22:04:38.3760556
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+02_bookshop_management_system/Bookshop.cpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+sqlite3/sqlite3.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+02_bookshop_management_system/Purchases.cpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+02_bookshop_management_system/Books.cpp:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+01_Hello/hi.cpp:
+#  Implicit rule search has been done.
+#  Last modified 2022-01-23 17:15:02.4871004
+#  File has been updated.
+#  Successfully updated.
+
+ 
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+clean:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 135):
+	rm -rf $(BIN_DIR)/*.o
+
+bin/Suppliers.o: 02_bookshop_management_system/Suppliers.cpp
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 122):
+	$(CPP) $(INC_DIR) $(CPPFLAGS) ./02_bookshop_management_system/Suppliers.cpp -o $(BIN_DIR)/Suppliers.o
+
+02_bookshop_management_system: bin/sqlite.o bin/02_bookshop_management_system.o bin/Bookshop.o bin/Books.o bin/Suppliers.o bin/Purchases.o
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 103):
+	$(CPP)  -o $(BIN_DIR)/02_bookshop_management_system \
+	 			$(BIN_DIR)/02_bookshop_management_system.o \
+	 			$(BIN_DIR)/Bookshop.o \
+	 			$(BIN_DIR)/Books.o \
+	 			$(BIN_DIR)/Suppliers.o \
+	 			$(BIN_DIR)/Purchases.o \
+	 			$(BIN_DIR)/sqlite.o \
+				$(LDLIBS) $(LDFLAGS) 
+
+bin/02_bookshop_management_system.o: 02_bookshop_management_system/main.cpp
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 113):
+	$(CPP) $(CPPFLAGS) ./02_bookshop_management_system/main.cpp -o $(BIN_DIR)/02_bookshop_management_system.o
+	
+
+bin/sqlite.o: sqlite3/sqlite3.c
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 128):
+	$(CC)  $(SQLITE_DIR)/sqlite3.c  -o $(BIN_DIR)/sqlite.o $(CFLAGS)
+
+bin/Bookshop.o: 02_bookshop_management_system/Bookshop.cpp
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 119):
+	$(CPP) $(INC_DIR) $(CPPFLAGS) ./02_bookshop_management_system/Bookshop.cpp -o $(BIN_DIR)/Bookshop.o
+
+# files hash-table stats:
+# Load=21/1024=2%, Rehash=0, Collisions=1/58=2%
+# VPATH Search Paths
+
+# No 'vpath' search paths.
+
+# No general ('VPATH' variable) search path.
+
+# strcache buffers: 1 (0) / strings = 32 / storage = 541 B / avg = 16 B
+# current buf: size = 8162 B / used = 541 B / count = 32 / avg = 16 B
+
+# strcache performance: lookups = 60 / hit rate = 46%
+# hash-table stats:
+# Load=32/8192=0%, Rehash=0, Collisions=1/60=2%
+# Finished Make data base on Sat Feb  5 22:04:46 2022
+
+ 

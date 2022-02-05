@@ -1,0 +1,10 @@
+{
+    "makefile.extensionOutputFolder": "./.vscode",
+    "makefile.launchConfigurations": [
+        {
+            "cwd": "/mnt/d/cpp_projects/project/bin",
+            "binaryPath": "/mnt/d/cpp_projects/project/bin/02_bookshop_management_system",
+            "binaryArgs": []
+        }
+    ]
+}

@@ -1,0 +1,5 @@
+make clean --dry-run --keep-going --print-directory
+make: Entering directory '/mnt/d/cpp_projects/project'
+rm -rf ./bin/*.o
+make: Leaving directory '/mnt/d/cpp_projects/project'
+ 
