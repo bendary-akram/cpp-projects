@@ -44,8 +44,8 @@ OBJECTS=$(OBJECTS_CPP:.cpp=.o) $(OBJECTS_C:.c=.o)
 #OBJECTS=$(filter %$(FILTERS),$($(TARGET)_SRC)):.cpp=.o
 
 #PROJECT_NAME = $(1)
-BIN_DIR = ./bin
-SQLITE_DIR = ./sqlite3
+BIN_DIR = ./project/bin
+SQLITE_DIR = ./project/sqlite3
 INC_DIR = -I$(SQLITE_DIR)
 #CPPFLAGS =-c -Wall -I$(INC_DIR)
 #LIB=-lsqlite3
@@ -109,20 +109,20 @@ $(BIN_DIR)/01_Hello.o: ./01_Hello/hi.cpp
 	 			$(BIN_DIR)/sqlite.o \
 				$(LDLIBS) $(LDFLAGS) 
 
-$(BIN_DIR)/02_bookshop_management_system.o: ./02_bookshop_management_system/main.cpp
-	$(CPP) $(CPPFLAGS) ./02_bookshop_management_system/main.cpp -o $(BIN_DIR)/02_bookshop_management_system.o
+$(BIN_DIR)/02_bookshop_management_system.o: ./project/02_bookshop_management_system/main.cpp
+	$(CPP) $(CPPFLAGS) ./project/02_bookshop_management_system/main.cpp -o $(BIN_DIR)/02_bookshop_management_system.o
 	
-$(BIN_DIR)/Books.o: ./02_bookshop_management_system/Books.cpp
-	$(CPP) $(INC_DIR) $(CPPFLAGS) ./02_bookshop_management_system/Books.cpp -o $(BIN_DIR)/Books.o
+$(BIN_DIR)/Books.o: ./project/02_bookshop_management_system/Books.cpp
+	$(CPP) $(INC_DIR) $(CPPFLAGS) ./project/02_bookshop_management_system/Books.cpp -o $(BIN_DIR)/Books.o
 	
-$(BIN_DIR)/Bookshop.o: ./02_bookshop_management_system/Bookshop.cpp
-	$(CPP) $(INC_DIR) $(CPPFLAGS) ./02_bookshop_management_system/Bookshop.cpp -o $(BIN_DIR)/Bookshop.o
+$(BIN_DIR)/Bookshop.o: ./project/02_bookshop_management_system/Bookshop.cpp
+	$(CPP) $(INC_DIR) $(CPPFLAGS) ./project/02_bookshop_management_system/Bookshop.cpp -o $(BIN_DIR)/Bookshop.o
 
-$(BIN_DIR)/Suppliers.o: ./02_bookshop_management_system/Suppliers.cpp
-	$(CPP) $(INC_DIR) $(CPPFLAGS) ./02_bookshop_management_system/Suppliers.cpp -o $(BIN_DIR)/Suppliers.o
+$(BIN_DIR)/Suppliers.o: ./project/02_bookshop_management_system/Suppliers.cpp
+	$(CPP) $(INC_DIR) $(CPPFLAGS) ./project/02_bookshop_management_system/Suppliers.cpp -o $(BIN_DIR)/Suppliers.o
 
-$(BIN_DIR)/Purchases.o: ./02_bookshop_management_system/Purchases.cpp
-	$(CPP) $(INC_DIR) $(CPPFLAGS) ./02_bookshop_management_system/Purchases.cpp -o $(BIN_DIR)/Purchases.o
+$(BIN_DIR)/Purchases.o: ./project/02_bookshop_management_system/Purchases.cpp
+	$(CPP) $(INC_DIR) $(CPPFLAGS) ./project/02_bookshop_management_system/Purchases.cpp -o $(BIN_DIR)/Purchases.o
 		
 $(BIN_DIR)/sqlite.o: $(SQLITE_DIR)/sqlite3.c
 	$(CC)  $(SQLITE_DIR)/sqlite3.c  -o $(BIN_DIR)/sqlite.o $(CFLAGS)
